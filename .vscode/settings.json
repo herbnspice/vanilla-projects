@@ -3,12 +3,12 @@
        {
            "format": "expanded",
            "extensionName": ".css",
-           "savePath": "/css"
+           "savePath": "/Seat Booking"
        },
        {
            "extensionName": ".min.css",
            "format": "compressed",
-           "savePath": "/css"
+           "savePath": "/Seat Booking"
        }
    ],
    "liveSassCompile.settings.excludeList": [
