@@ -4,6 +4,7 @@ const showMillonairesBtn = document.getElementById('show-millonaires')
 const calculateWealthBtn = document.getElementById('calculate-wealth')
 const sortBtn = document.getElementById('sort')
 const main = document.getElementById('main')
+
 let data = []
 async function getRandomUser() {
 
@@ -51,6 +52,7 @@ function sortRich( ){
     updateDOM()
     
 }
+
 function showMillonaires(){
     data = data.filter(( user) => {
         return  user.money < 1000000
