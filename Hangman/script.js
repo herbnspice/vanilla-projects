@@ -5,12 +5,10 @@ const notification = document.getElementById('notification-container')
 const popup = document.getElementById('popup-container')
 const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
-
 const words = ['applications', 'interface', 'dog', 'cat']
 
 let selectedWord = words[Math.floor(Math.random() * words.length)]
 
-console.log(selectedWord )
 const correctLetters = ['d', 'o' , 'g']
 const wrongLetters = []
 
