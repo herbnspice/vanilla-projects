@@ -7,9 +7,10 @@ const form = document.getElementById('form')
 const text = document.getElementById('text')
 const amount = document.getElementById('amount')
 
-const localStorageTransaction  = JSON.parse( localStorage.getItem('transaction'))
+const localStorageTransaction  = JSON.parse( localStorage.getItem('transactions'))
 
 let transactions = localStorage.getItem('transactions') !== null ? localStorageTransaction : [];
+
 
 function addTransactionDOM( transaction ) {
     const sign = transaction.amount < 0 ? '-' : '+';
@@ -22,14 +23,20 @@ function addTransactionDOM( transaction ) {
     list.appendChild(item)
 }
 function removeTransaction( id) {
+
+    console.log( transactions )
+   
+
     transactions = transactions.filter( transaction => transaction.id !== id )
+    
     updateLocalStorage()
     init()
 
 }
 
 function updateLocalStorage() {
-    localStorage.setItem( 'transactions', JSON.stringify(transactions))
+    console.log( transactions)
+    localStorage.setItem('transactions', JSON.stringify(transactions))
 }
 //Update the balance, income and expense
 function updateValues(){
@@ -65,13 +72,17 @@ function addTransaction( e){
             text: text.value,
             amount: +amount.value
         }
-        transactions.push()
+        transactions.push( transaction )
         addTransactionDOM(transaction)
         updateValues()
+
+        console.log( transactions)
+
+        updateLocalStorage()
         text.value = ''
         amount.value = ''
 
-        updateLocalStorage()
+        
     }
 }
 function generateID(){
