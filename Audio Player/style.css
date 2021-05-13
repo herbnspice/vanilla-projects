@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+    box-sizing: border;
+}
+
+body{
+    background-image:  linear-gradient(
+        0deg,
+        rgba( 247,247,247,1) 23.8%,
+        rgba( 252,221,221,1) 91%,
+
+    );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato';
+}
+
+.music-container{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba( 252, 169, 169, 0.6);
+    padding:20px 30px;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-continer{
+    position: relative;
+    width: 110px;
+}
+
+.img-continer img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
