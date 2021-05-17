@@ -29,17 +29,58 @@ body{
     z-index: 10;
 }
 
-.img-continer{
+.img-container{
     position: relative;
     width: 110px;
 }
 
-.img-continer img {
+.img-container img {
     border-radius: 50%;
     object-fit: cover;
     height: 100px;
-    width: inherit;
+    width: 100px;
     position: absolute;
+    margin:10px 0px;
     bottom: 0;
     left: 0;
+    animation-play-state: pause;
+}
+
+.img-container.play img{
+    animation: rotate 3s linear infinite;
+
+}
+
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.action-btn{
+    background: #fff;
+    bordeR: 0;
+    color: #dfdfdf;
+    font-size: 20px;
+}
+
+.action-btn.action-btn-big{
+    color:#cdc2d0;
+    font-size: 30px;
+    outline: 0;
 }
