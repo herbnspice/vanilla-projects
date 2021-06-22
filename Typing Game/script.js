@@ -93,7 +93,6 @@ text.addEventListener('input', e=>{
 
 settingsBtn.addEventListener('click', () => {
     settings.classList.toggle('hide')
-
 })
 
 //settings select
